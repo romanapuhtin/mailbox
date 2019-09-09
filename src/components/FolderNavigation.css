@@ -1,0 +1,61 @@
+.folder-nav {
+  margin: 10px 20px 20px 0;
+  display: flex;
+  flex-flow: column nowrap;
+  user-select: none;
+}
+      
+.folder-ntf {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 8px 0px;
+  border-radius: 0px 25px 25px 0px;
+  font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+  cursor: pointer;
+}
+
+.folder-ntf__name {
+  flex: 1 0 auto;
+  padding-left: 20px;
+  font-size: 15px;
+}
+
+.folder-ntf__unread {
+  flex: 0 0 auto;
+  font-size: 12px;
+  width: 20px;
+  text-align: center;
+}
+
+.folder-ntf__slash {
+  flex: 0 0 auto;
+  font-size: 12px;
+  width: 10px;
+  text-align: center;
+}
+
+.folder-ntf__total {
+  flex: 0 0 auto;
+  font-size: 12px;
+  width: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.folder-ntf.current {
+  background-color: #fce8e6;
+  color: #d93025;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.folder-ntf:hover {
+  background-color: #eee;
+}
+
+.folder-ntf.current:hover {
+  background-color: #fce8e6;
+  color: #d93025;
+}

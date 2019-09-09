@@ -1,0 +1,54 @@
+.main {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    width: 100%;
+    align-items: stretch;
+}
+
+.head {
+    padding: 8px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: inset 0 -1px 0 rgba(100,121,143,0.122);
+}
+
+section {
+    height: 100%;
+}
+
+.body {
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #f9f9f9;
+    align-items: stretch;
+}
+
+.side {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 256px;
+    max-width: 256px;
+    min-width: 256px;
+    position: relative;
+}
+
+.wall {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    position: relative;
+}
+
+.wall-toolbar {
+    margin: 0 16px 0 0;
+    box-shadow: inset 0 -1px 0 rgba(100,121,143,0.122);
+}
+
+.wall-feed {
+    height: 100%;
+    position: relative;
+}

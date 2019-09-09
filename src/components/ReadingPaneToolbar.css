@@ -1,0 +1,254 @@
+.reading-pane-tlbr {
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+    padding: 16px 16px;
+    z-index: 10;
+}
+
+.reading-pane-tlbr.center {
+  
+  justify-content: center;
+}
+
+.reading-pane-tlbr .checkbox-btn-dropdown {
+    height: 100%;
+    width: 100px;
+    display: block;
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+}
+
+.reading-pane-tlbr .checkbox-btn-dropdown .checkbox {
+    display: block;
+    position: relative;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.reading-pane-tlbr .checkbox-btn-dropdown .checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.reading-pane-tlbr .checkbox-btn-dropdown .checkbox .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.reading-pane-tlbr .checkbox-btn-dropdown .checkbox:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.reading-pane-tlbr .checkbox-btn-dropdown .checkbox input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.reading-pane-tlbr .checkbox-btn-dropdown .checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.reading-pane-tlbr .checkbox-btn-dropdown .checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.reading-pane-tlbr .checkbox-btn-dropdown .checkbox .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.reading-pane-tlbr .checkbox-btn-dropdown button {
+  background-color: transparent;
+  color: black;
+  border: none;
+  outline: none;
+  font-size: 10px; 
+  padding: 0 5px;
+  height: 24px;
+  width: 34px;
+}
+
+.reading-pane-tlbr .checkbox-btn-dropdown .dropdown {
+  z-index: 11;
+    position: absolute;
+    top: 100%;
+    left: -24px;
+    border-radius: 4px;
+    display: flex;
+    flex-flow: column nowrap;
+    user-select: none;
+    line-height: 20px;
+    font-size: .875rem;
+    letter-spacing: .2px;
+    user-select: none;
+    overflow: auto;
+    background: #fff;
+    
+    display: none;
+    box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    line-height: 20px;
+    padding: 6px 0;
+    position: absolute;
+    z-index: 7;
+}
+
+.reading-pane-tlbr .move-to .dropdown {
+  z-index: 11;
+    position: absolute;
+    top: 70%;
+    border-radius: 4px;
+    display: flex;
+    flex-flow: column nowrap;
+    user-select: none;
+    line-height: 20px;
+    font-size: .875rem;
+    letter-spacing: .2px;
+    user-select: none;
+    overflow: auto;
+    background: #fff;
+    
+    display: none;
+    box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    line-height: 20px;
+    padding: 6px 0;
+    position: absolute;
+    z-index: 7;
+}
+
+
+
+.btn-dropdown {
+  position: relative;
+}
+
+.reading-pane-tlbr .checkbox-btn-dropdown .btn-dropdown:hover .dropdown {
+  display: flex;
+}
+
+.reading-pane-tlbr .move-to:hover .dropdown {
+  display: flex;
+}
+
+.reading-pane-tlbr .checkbox-btn-dropdown button:hover {
+  background-color: #eeeeee;
+}
+
+.reading-pane-tlbr .checkbox-btn-dropdown .dropdown span {
+  position: relative;
+  width: 100px;
+  padding: 10px 10px;
+  font-size: 16px;
+  font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+  cursor: pointer;
+}
+
+.reading-pane-tlbr .move-to .dropdown span {
+  position: relative;
+  width: 100px;
+  padding: 10px 10px;
+  font-size: 16px;
+  font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+  cursor: pointer;
+}
+
+.invisible{
+  display: none;
+}
+
+.reading-pane-tlbr .checkbox-btn-dropdown .dropdown span:hover  {
+  background-color: #dddddd;
+  color: #1b1b1b;
+}
+
+.reading-pane-tlbr .move-to .dropdown span:hover  {
+  background-color: #dddddd;
+  color: #1b1b1b;
+}
+
+
+/* Tooltip */
+.checkbox-btn-dropdown {
+  position: relative;
+  display: inline-block;
+  /*border-bottom: 1px dotted black;*/
+}
+
+.checkbox-btn-dropdown .tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-size: 14px;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 10;
+  top: 110%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.checkbox-btn-dropdown:hover .tooltip-text {
+  visibility: visible;
+}
+
+i {
+  font-size: 20;
+  vertical-align: middle;
+}
+
+span{
+  font-size:16px;
+  vertical-align:middle;
+  font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+  
+}
+
+.move-to{
+  cursor: pointer;
+}
+
+.move-to:hover {
+  background-color: #dddddd;
+  color: #1b1b1b;
+}
+
+.reading-pane-tlbr-close{
+  cursor: pointer;
+}
+
+.reading-pane-tlbr-close:hover {
+  background-color: #dddddd;
+  color: #1b1b1b;
+}

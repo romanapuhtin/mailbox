@@ -1,0 +1,30 @@
+.message-cntr {
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  overflow-y: auto;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+  margin-right: 0;
+  
+}
+
+.message-cntr-scroll {
+  position: relative;
+  display: block;
+}
+
+.message-tlbr {
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+  padding: 16px 16px;
+}
+
+.message-img {
+  max-width: 1000px;
+}
